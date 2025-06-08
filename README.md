@@ -1,8 +1,9 @@
 CRM-App
 A modern, responsive Customer Relationship Management (CRM) web application built with React, Redux Toolkit, and Tailwind CSS. This app provides user authentication, a dynamic dashboard with data visualizations, and product management with full CRUD operations, leveraging the DummyJSON API for authentication and product data.
+
+Use username: emilys, password: emilyspass to access the dashboard.
  
 Features
-
 Secure Authentication:
 
 Login page with password visibility toggle using the DummyJSON Auth API (https://dummyjson.com/auth/login).
