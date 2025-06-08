@@ -58,7 +58,7 @@ function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-900 to-blue-900 flex items-center justify-center">
       <div className="bg-white/10 backdrop-blur-lg p-8 rounded-xl shadow-2xl w-full max-w-md transform transition-all duration-500 hover:scale-105">
-        <h2 className="text-3xl font-bold text-white text-center mb-6">Welcome Back</h2>
+        <h2 className="text-3xl font-bold text-white text-center mb-6">Welcome</h2>
         {error && <p className="text-red-400 bg-red-900/50 p-2 rounded mb-4 text-center">{error}</p>}
         <form onSubmit={handleLogin} className="space-y-6">
           <div>
