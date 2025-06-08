@@ -105,45 +105,11 @@ Copy public/index.html to public/404.html to handle routes like /crm-app/dashboa
 Deploy:
 npm run deploy
 
-
 Pushes the build folder to the gh-pages branch.
 Enable GitHub Pages in repository settings (Source: gh-pages, / (root)).
 
-
 Access:
-
 Visit https://your-username.github.io/crm-app after 1–10 minutes.
 
 
-
-Troubleshooting Deployment
-
-Blank Page: Verify homepage matches the GitHub Pages URL and check console errors (F12).
-404 Errors: Ensure public/404.html exists for SPA routing.
-API Issues: DummyJSON API calls should work; fallback to mocked login if CORS arises.
-
-Project Structure
-crm-app/
-├── public/
-│   ├── index.html
-│   ├── 404.html
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   ├── Login.js
-│   │   ├── Dashboard.js
-│   │   ├── ProductManagement.js
-│   │   ├── Navbar.js
-│   │   └── PrivateRoute.js
-│   ├── redux/
-│   │   ├── authSlice.js
-│   │   ├── productSlice.js
-│   │   └── store.js
-│   ├── App.js
-│   ├── index.js
-│   └── index.css
-├── .gitignore
-├── package.json
-└── README.md
-
-Built by [Krish Panchal] for a React-based CRM application demo.
+Built by Krish Panchal for a React-based CRM application demo.
