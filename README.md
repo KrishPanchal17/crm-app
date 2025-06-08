@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+CRM-App
+A modern, responsive Customer Relationship Management (CRM) web application built with React, Redux Toolkit, and Tailwind CSS. This app provides user authentication, a dynamic dashboard with data visualizations, and product management with full CRUD operations, leveraging the DummyJSON API for authentication and product data.
+ 
+Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Secure Authentication:
 
-## Available Scripts
+Login page with password visibility toggle using the DummyJSON Auth API (https://dummyjson.com/auth/login).
+Token-based authentication with public (/login) and private routes (/dashboard, /product).
+Persistent login state via localStorage.
 
-In the project directory, you can run:
 
-### `npm start`
+Interactive Dashboard:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Visualizes product sales data with three Chart.js graphs (line, bar, pie).
+Unique, theme-adaptive colors for each product.
+Responsive design with glassmorphism UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Product Management:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Full CRUD operations (Create, Read, Update, Delete) for products.
+Initial product data fetched from DummyJSON Products API (https://dummyjson.com/products?limit=5).
+Client-side persistence of user-added products in localStorage.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Modern UI/UX:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Built with Tailwind CSS for a sleek, dark-themed interface.
+Glassmorphism effects and smooth transitions.
+Heroicons for intuitive icons (e.g., password toggle, navigation).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Robust Architecture:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+State management with Redux Toolkit.
+Client-side routing with React Router.
+SPA routing configured for deployment on GitHub Pages.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Tech Stack
 
-## Learn More
+Frontend: React (18.2.0), React Router (6.3.0), Redux Toolkit (1.9.5), React Redux (8.0.5)
+Styling: Tailwind CSS (3.3.2), Heroicons (2.0.18)
+Data Visualization: Chart.js (4.3.0), React ChartJS-2 (5.2.0)
+API Integration: Axios (1.4.0), DummyJSON API
+Build Tool: Create React App (react-scripts@5.0.1)
+Deployment: GitHub Pages, gh-pages (6.0.0)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Getting Started
+Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Node.js (v16 or higher recommended; check with node -v)
+npm (v8 or higher; check with npm -v)
+Git (for cloning the repository)
 
-### Code Splitting
+Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone the Repository:
+git clone https://github.com/your-username/crm-app.git
+cd crm-app
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Install Dependencies:
+npm install
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Run Locally:
+npm start
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Opens at http://localhost:3000/crm-app (due to homepage setting).
+Login with credentials: Username: emilys, Password: emilyspass (DummyJSON API).
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm start: Runs the app in development mode.
+npm run build: Builds the app for production to the build folder.
+npm run deploy: Builds and deploys to GitHub Pages (requires gh-pages setup).
+npm test: Launches the test runner.
+npm run eject: Ejects from Create React App (irreversible).
+
+Deployment
+GitHub Pages
+
+Configure package.json:
+
+Set "homepage": "https://your-username.github.io/crm-app".
+Ensure gh-pages is installed (npm install gh-pages --save-dev).
+
+
+Set Base Path:
+
+In src/index.js, set <BrowserRouter basename="/crm-app">.
+
+
+SPA Routing:
+
+Copy public/index.html to public/404.html to handle routes like /crm-app/dashboard.
+
+
+Deploy:
+npm run deploy
+
+
+Pushes the build folder to the gh-pages branch.
+Enable GitHub Pages in repository settings (Source: gh-pages, / (root)).
+
+
+Access:
+
+Visit https://your-username.github.io/crm-app after 1–10 minutes.
+
+
+
+Troubleshooting Deployment
+
+Blank Page: Verify homepage matches the GitHub Pages URL and check console errors (F12).
+404 Errors: Ensure public/404.html exists for SPA routing.
+API Issues: DummyJSON API calls should work; fallback to mocked login if CORS arises.
+
+Project Structure
+crm-app/
+├── public/
+│   ├── index.html
+│   ├── 404.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── Login.js
+│   │   ├── Dashboard.js
+│   │   ├── ProductManagement.js
+│   │   ├── Navbar.js
+│   │   └── PrivateRoute.js
+│   ├── redux/
+│   │   ├── authSlice.js
+│   │   ├── productSlice.js
+│   │   └── store.js
+│   ├── App.js
+│   ├── index.js
+│   └── index.css
+├── .gitignore
+├── package.json
+└── README.md
+
+Built by [Krish Panchal] for a React-based CRM application demo.
